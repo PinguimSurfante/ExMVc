@@ -6,26 +6,26 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "cadastro")
-public class Tarefa {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Table(name = "genero")
+public class Genero {
+    @Id // Defini chave primary 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto increment
     private long id;
     private String nome;
 
-    public void SetId(long id){
+    public void setId(long id){
         this.id = id;
     }
 
-    public long GetId(){
+    public long getId(){
         return this.id;
     }
 
-    public void SetNome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String SetNome() {
+    public String getNome() {
         return this.nome;
     }
 }
